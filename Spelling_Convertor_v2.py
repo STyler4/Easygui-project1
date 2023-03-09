@@ -1,4 +1,6 @@
-# Convert US spelling to
+"""Convert US spelling to Nz version 2
+This program progresses from Spelling_convertor_v1
+This program will replace ise to ize and yse to yze"""
 import easygui
 
 nz_word = easygui.enterbox("Please enter the NZ word", "Word to check")
