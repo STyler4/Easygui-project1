@@ -2,18 +2,15 @@ import random
 import easygui as eg
 
 def roll_dice():
-    """Simulate rolling five dice"""
     return [random.randint(1, 6) for _ in range(5)]
 
 def count_dice(dice_list):
-    """Count the number of occurrences for each dice value"""
     count_dict = {}
     for dice in dice_list:
         count_dict[dice] = count_dict.get(dice, 0) + 1
     return count_dict
 
 def check_win(dice_list):
-    """Check if the roll is a winning combination"""
     counts = count_dice(dice_list)
     if 5 in counts.values():
         return "Yahtzee!"
@@ -25,7 +22,6 @@ def check_win(dice_list):
         return "Better luck next time"
 
 def play_game():
-    """Play one round of Yahtzee Lite"""
     eg.msgbox("Welcome to Yahtzee Lite!")
     roll_count = 0
     dice_list = roll_dice()
@@ -44,7 +40,6 @@ def play_game():
     return
 
 def main():
-    """Play multiple rounds of Yahtzee Lite"""
     play_again = True
     while play_again:
         play_game()
